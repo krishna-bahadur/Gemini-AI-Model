@@ -1,0 +1,58 @@
+﻿@model ImageClassificationModel
+@{
+    ViewData["Title"] = "Google AI";
+}
+<div class="home-page">
+    <div class="home-page-main-div">
+        <h1 contenteditable>IMAGE PROCESSING AI</h1>
+        <p>The Gemini API allows developers to build generative AI applications using Gemini models.</p>
+        <button class="explore-button" onclick="scrollToSection()"> Expore AI  <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+</div>
+
+
+<div class="AI_section px-5 py-3">
+    <div class="container">
+        <div class="row text-center">
+            <h2>Gemini Pro Vision Model</h2>
+            <p>Image processing model, develop by Gemini AI. Which provides informations according to the description of the image.</p>
+        </div>
+        <div class="row my-3">
+            <div class="col col-md col-sm border-end p-3 form">
+                <form asp-action="Index" asp-controller="home" id="aiForm" method="post" enctype="multipart/form-data">
+                    <input asp-for="Image" class="form-control" accept="image/*" required onchange="displayImage(this)" />
+                    <img id="uploadedImage" class="my-2"/>
+                    <textarea asp-for="Description" class="form-control" required placeholder="Describe the provided image."></textarea>
+
+
+                    <button type="button" class="my-2 hint-btn" onclick="AppendContent(this)">Generate Recipe from the provided image.</button>
+                    <button type="button" class="my-2 hint-btn" onclick="AppendContent(this)">What object is this? Describe how it might be used.</button>
+                    <button type="button" class="my-2 hint-btn" onclick="AppendContent(this)">Write a short, engaging blog post based on this picture.</button>
+                    <button type="button" class="my-2 hint-btn" onclick="AppendContent(this)">Extract the objects in the provided image and output them in a list in alphabetical order.</button>
+                    <div class="d-flex justify-content-end">
+                        <button type="submit" class="px-3 submit-btn">Get Result <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </form>
+                
+            </div>
+            <div class="col col-md col-sm p-3">
+                <div class="lds-roller" id="lds-roller">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <h4 class="ai-reposne border-bottom mb-4"><span>AI Response</span></h4>
+                <div class="response"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<span class="source">Google AI Studio</span>
+
+
