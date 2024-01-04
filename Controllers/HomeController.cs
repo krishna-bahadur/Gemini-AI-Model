@@ -32,7 +32,7 @@ namespace GoogleAIStudio.Controllers
                     }
                 }
 
-                string apiKey = "API-KEY";
+                string apiKey = "AIzaSyCWv__fD6OtTpiS07DiCe2ia93fG0uYj1k";
                 string apiUrl = "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro-vision:generateContent?key=" + apiKey;
 
                 using (HttpClient httpClient = new HttpClient())

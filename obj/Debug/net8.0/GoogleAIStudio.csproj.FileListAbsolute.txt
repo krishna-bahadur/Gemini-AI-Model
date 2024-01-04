@@ -32,3 +32,4 @@ D:\.Net\GoogleAIStudio\bin\Debug\net8.0\libman.json
 D:\.Net\GoogleAIStudio\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\.Net\GoogleAIStudio\obj\Debug\net8.0\GoogleAIStudio.csproj.AssemblyReference.cache
 D:\.Net\GoogleAIStudio\obj\Debug\net8.0\GoogleAIStudio.csproj.CopyComplete
+D:\.Net\GoogleAIStudio\obj\Debug\net8.0\GoogleAIStudio.sourcelink.json
